@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+      <!--
+  
+         Author: Amber Herrin
+         Date:   12/1/2025
+   
+         Filename: reservations.html
+   
+      -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Haven Café - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Bean Haven Logo">
+            <h1>Bean Haven Café</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+				<li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<h2 style="text-align:center; margin: 3rem;">Make a Reservation</h2>
+<form action="save.php.php" method="POST">
+    <label>Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label>Phone:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label>Date:</label>
+    <input type="date" name="date" required>
+
+    <label>Time:</label>
+    <select name="time" required>
+        <option value="">Select Time</option>
+        <option>9:00 AM</option>
+        <option>11:00 AM</option>
+        <option>2:00 PM</option>
+        <option>5:00 PM</option>
+        <option>7:00 PM</option>
+    </select>
+
+    <label>Guests:</label>
+    <input type="number" id="guests" name="guests" min="1" max="20" required>
+
+    <label>Special Requests:</label>
+    <textarea name="requests" rows="4"></textarea>
+
+    <button type="submit">Submit Reservation</button>
+</form>
+
+    <footer>
+        <p>© 2025 Bean Haven Café.(BYOC)-Bring your own cat</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
